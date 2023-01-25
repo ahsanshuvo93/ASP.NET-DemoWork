@@ -36,5 +36,12 @@ namespace ASP.NET_DemoWork.Service
 
             return response;
         }
+
+        public async Task<int> UpdateUser(User model)
+        {
+            var response = await _userRepository.UpdateUser(model);
+
+            return response;
+        }
     }
 }

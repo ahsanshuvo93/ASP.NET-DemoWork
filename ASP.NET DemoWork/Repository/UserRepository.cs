@@ -83,17 +83,40 @@ namespace ASP.NET_DemoWork.Repository
                 throw;
             }
         }
-        //public Guid UpdateUser(User model)
-        //{
-        //    Guid result = new Guid();
-        //    if (model != null)
-        //    {
-        //        //_context.Entry(model).State = EntityState.Modified;
-        //        _context.SaveChanges();
-        //        result = model.UserId;
-        //    }
-        //    return result;
-        //}
+
+
+        public async Task<int> UpdateUser(User model)
+        {
+            try
+            {
+                var query = "update [dbo].[User] set FullName = @name, Email = @email, PhoneNumber = @phone, Password = @password, BirthDate = @birthdate, Image = @image, status = @status where UserID = @userId";
+
+                var parameters = new DynamicParameters();
+
+                parameters.Add("userId", model.UserId, DbType.Guid);
+                parameters.Add("name", model.FullName, DbType.String);
+                parameters.Add("email", model.Email, DbType.String);
+                parameters.Add("phone", model.PhoneNumber, DbType.String);
+                parameters.Add("password", model.Password, DbType.String);
+                parameters.Add("birthdate", model.Birthdate, DbType.DateTime);
+                parameters.Add("image", model.Image, DbType.String);
+                parameters.Add("status", model.Status, DbType.String);
+
+                var con = GetDbConnection();
+                con.Open();
+                var response = await con.ExecuteAsync(query, parameters);
+                con.Close();
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
         //public void DeleteUser(Guid id)
         //{
         //    User model = _context.Users.Find(id);

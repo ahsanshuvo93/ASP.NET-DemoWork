@@ -12,7 +12,7 @@ namespace ASP.NET_DemoWork.Repository
         Task<IEnumerable<User>> GetAllUser();
         Task<User> GetUserById(Guid id);
         Task<int> AddUser(User model);
-        Task<Guid> UpdateUser(User model);
+        Task<int> UpdateUser(User model);
         Task DeleteUser(Guid id);
     }
 }

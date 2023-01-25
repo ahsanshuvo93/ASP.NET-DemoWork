@@ -41,5 +41,13 @@ namespace ASP.NET_DemoWork.Controllers
 
             return response;
         }
+
+        [Route("api/user/update")]
+        public async Task<int> UpdateUser(User model)
+        {
+            var response = await _userService.UpdateUser(model);
+
+            return response;
+        }
     }
 }
