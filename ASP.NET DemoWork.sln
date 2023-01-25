@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET DemoWork", "ASP.NET DemoWork\ASP.NET DemoWork.csproj", "{14BAE3D6-B051-4D63-A903-9D5A74C32825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET DemoWork.Tests", "ASP.NET DemoWork.Tests\ASP.NET DemoWork.Tests.csproj", "{28702E21-345C-4A9D-80F2-9123CD8EE407}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14BAE3D6-B051-4D63-A903-9D5A74C32825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14BAE3D6-B051-4D63-A903-9D5A74C32825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14BAE3D6-B051-4D63-A903-9D5A74C32825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14BAE3D6-B051-4D63-A903-9D5A74C32825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28702E21-345C-4A9D-80F2-9123CD8EE407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28702E21-345C-4A9D-80F2-9123CD8EE407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28702E21-345C-4A9D-80F2-9123CD8EE407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28702E21-345C-4A9D-80F2-9123CD8EE407}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C64C60F7-ACEC-461B-AF2C-09B9A6D2A961}
+	EndGlobalSection
+EndGlobal
