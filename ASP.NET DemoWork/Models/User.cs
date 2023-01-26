@@ -20,10 +20,8 @@ namespace ASP.NET_DemoWork.Models
 
 
 /*
- * 
- * Create Table Script
- * 
- * CREATE TABLE [User] (
+ 
+  CREATE TABLE [User] (
     UserID uniqueidentifier not null,
     FullName varchar(100),
     Email varchar(100) not null,
@@ -34,6 +32,5 @@ namespace ASP.NET_DemoWork.Models
     [status] varchar(20),
 	PRIMARY KEY (UserID)
 );
- * 
- * 
+ 
  */

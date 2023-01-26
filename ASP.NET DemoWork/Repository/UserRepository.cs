@@ -1,6 +1,8 @@
-﻿using ASP.NET_DemoWork.Models;
+﻿using ASP.NET_DemoWork.ModelResponse;
+using ASP.NET_DemoWork.Models;
 using Dapper;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -116,6 +118,31 @@ namespace ASP.NET_DemoWork.Repository
             }
         }
 
+        public async Task<UserWithAddress> GetUserWithAddress()
+        {
+            try
+            {
+                UserWithAddress _userWithAddress = new UserWithAddress();
+
+                var procedure = "GetUserWithAddress";
+
+                var con = GetDbConnection();
+                con.Open();
+
+                var objDetails = await SqlMapper.QueryMultipleAsync(con, procedure, null, commandType: CommandType.StoredProcedure);
+                _userWithAddress.User = objDetails.Read<User>().ToList();
+                _userWithAddress.UserAddress = objDetails.Read<UserAddress>().ToList();
+
+                con.Close();
+
+                return _userWithAddress;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
 
         //public void DeleteUser(Guid id)
         //{

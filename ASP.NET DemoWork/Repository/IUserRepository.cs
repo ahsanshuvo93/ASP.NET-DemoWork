@@ -1,4 +1,5 @@
-﻿using ASP.NET_DemoWork.Models;
+﻿using ASP.NET_DemoWork.ModelResponse;
+using ASP.NET_DemoWork.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace ASP.NET_DemoWork.Repository
         Task<int> AddUser(User model);
         Task<int> UpdateUser(User model);
         Task DeleteUser(Guid id);
+        Task<UserWithAddress> GetUserWithAddress();
     }
 }

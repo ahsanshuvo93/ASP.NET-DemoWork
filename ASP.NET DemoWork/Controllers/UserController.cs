@@ -1,4 +1,5 @@
-﻿using ASP.NET_DemoWork.Models;
+﻿using ASP.NET_DemoWork.ModelResponse;
+using ASP.NET_DemoWork.Models;
 using ASP.NET_DemoWork.Service;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,14 @@ namespace ASP.NET_DemoWork.Controllers
         public async Task<int> UpdateUser(User model)
         {
             var response = await _userService.UpdateUser(model);
+
+            return response;
+        }
+
+        [Route("api/user/useraddress")]
+        public async Task<UserWithAddress> GetUserAddress()
+        {
+            var response = await _userService.GetUserAddress();
 
             return response;
         }

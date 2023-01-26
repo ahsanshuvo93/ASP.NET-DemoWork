@@ -1,4 +1,5 @@
-﻿using ASP.NET_DemoWork.Models;
+﻿using ASP.NET_DemoWork.ModelResponse;
+using ASP.NET_DemoWork.Models;
 using ASP.NET_DemoWork.Repository;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,13 @@ namespace ASP.NET_DemoWork.Service
         public async Task<int> UpdateUser(User model)
         {
             var response = await _userRepository.UpdateUser(model);
+
+            return response;
+        }
+
+        public async Task<UserWithAddress> GetUserAddress()
+        {
+            var response = await _userRepository.GetUserWithAddress();
 
             return response;
         }
